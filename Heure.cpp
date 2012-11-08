@@ -1,5 +1,5 @@
 #include "Heure.hpp"
-Heure::Heure():minutes(0){};
+Heure::Heure():minutes(0){}
 Heure::Heure(const int &h,const int &m){
   minutes=(h*60+m)/1440;
 }
@@ -110,6 +110,6 @@ bool Heure::operator!=(const Heure&b)const
   return minutes!=b.minutes;
 }
 
-int Heure::set(const int &h, const int &m){
+void Heure::set(const int &h, const int &m){
   minutes=(h*60+m)/1440;
 }

@@ -3,7 +3,7 @@
 
 class Heure{
  private :
-   unsigned int minutes;
+   int minutes;
 public:
   //Constructeurs
  Heure();
@@ -32,6 +32,6 @@ public:
  int heure()const;
  int minute()const;
  int value()const;
- int set(const int &h, const int &m);
+ void set(const int &h, const int &m);
 };
 #endif//HEURE_H

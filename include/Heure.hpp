@@ -9,6 +9,7 @@ public:
  Heure();
  Heure(const int &h,const int &m);
  Heure(const int &m);
+ Heure(const int &h,const int &m, const int &d);
  
  //Opérateur constants
  Heure operator+(const Heure &b) const;
@@ -29,6 +30,7 @@ public:
   bool operator!=(const Heure&b)const;
  
  //Accesseurs
+ int jour() const;
  int heure()const;
  int minute()const;
  int value()const;

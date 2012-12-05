@@ -9,7 +9,7 @@ int main(int argc, char** argv)
   std::string fichier_trajets(argv[1]), fichier_gares(argv[2]);
   Bdd bdd(fichier_trajets,fichier_gares);
   std::cout<<"scan terminé\n";
-  std::set<Etape, Comparator_Etape> resultat=Calcul_trajet("Paris Montparnasse","Marseille SaintCharles",Heure(8,0),0.999,bdd);
+  std::set<Etape, Comparator_Etape> resultat=Calcul_trajet("Paris Montparnasse","Marseille SaintCharles",Heure(8,0),0.999,bdd,false,Heure(0));
   std::cout<<resultat.size()<<" trajets ont étés trouvés :\n";
   
   std::list<Ligne_Bdd*>::const_iterator it;

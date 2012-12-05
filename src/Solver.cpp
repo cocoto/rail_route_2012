@@ -1,5 +1,5 @@
 #include "Solver.hpp"
-std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const std::string &arrivee,const Heure &heure_depart, const float &preference,Bdd bdd)
+std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const std::string &arrivee,const Heure &heure_depart, const float &preference,Bdd &bdd, const bool &retour, const Heure &heure_retour)
 {
   std::priority_queue<Etape, std::vector<Etape>, Comparator> traitement((Comparator(preference)));
   std::list<Ligne_Bdd*> trajets;
@@ -19,7 +19,7 @@ std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const 
     
     etape=traitement.top(); //traitement de la première Etape de la liste
     traitement.pop();
-    trajets=bdd.get_disponibles(etape.ville,etape.heure); // récupération de la liste des trajets découlant de cette étape
+    trajets=bdd.get_disponibles(etape.ville,etape.heure,true); // récupération de la liste des trajets découlant de cette étape
     
     while(!trajets.empty()) // pour chaque trajet récupéré, on l'ajoute sous forme d'Etape à la liste des Etapes à traiter
     {
@@ -41,7 +41,17 @@ std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const 
 	}
 	else
 	{
-	  etape2.heure=(*trajet).h_arrivee();
+	  //Si l'heure de départ du train est déjà passée
+	  if(etape2.heure>(trajet->h_depart()+1440*etape2.heure.jour()))
+	  {
+	    //On prend ce même train, mais le lendemain
+	    //std::cout<<etape2.heure.jour()<<"\n";
+	    etape2.heure=trajet->h_arrivee()+1440*(1+etape2.heure.jour());
+	  }
+	  else
+	  {
+	   etape2.heure=(*trajet).h_arrivee()+1440*etape2.heure.jour(); 
+	  }
 	  etape2.prix_total+=(*trajet).prix()*((*trajet).h_arrivee()-(*trajet).h_depart()).value()/60;
 	  etape2.ville=(*trajet).gare_arrivee();
 	  etape2.trajets_effectues.push_back(trajet);
@@ -53,13 +63,44 @@ std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const 
 	{
 	  if(etape2.ville==arrivee)//// si on est arrivé à la bonne ville
 	  {
-	    resultats.insert(etape2);
-	    //Condition de premier "remplissage" du TOP X
-	    if(resultats.size()> TAILLE_TOP_SCORE)
+	    //Et que c'est un aller simple
+	    if(!retour)
 	    {
-	      resultats.erase(resultats.begin());
+	      //On met à jour le TOPX
+	      resultats.insert(etape2);
+	      //Condition de premier "remplissage" du TOP X
+	      if(resultats.size()> TAILLE_TOP_SCORE)
+	      {
+		resultats.erase(resultats.begin());
+	      }
 	    }
+	    
+	    //Cas d'arrivée à la ville (mais retour à faire)
+	    else
+	    {
+	      //Si on est arrivé avant l'heure de retour, on se place à cette heure de retour
+	      if(etape2.heure<heure_retour)
+	      {
+		etape2.heure=heure_retour;
+	      }
+	      //On vide les villes traversés
+	      etape2.gares_traverses.clear();
+	      etape2.gares_traverses.insert(arrivee);
+	    }
+	    
 	  }// fin ville arrivee
+	  
+	  //Si on est revenu à la ville de départ (cas aller-retour)
+	  else if(etape2.ville==depart)
+	  {
+	      resultats.insert(etape2);
+	      //Condition de premier "remplissage" du TOP X
+	      if(resultats.size()> TAILLE_TOP_SCORE)
+	      {
+		resultats.erase(resultats.begin());
+	      }
+	  }
+	  //Si on est encore dans le chemin
 	  else
 	  {
 	    traitement.push(etape2);

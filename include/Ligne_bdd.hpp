@@ -21,7 +21,7 @@ public:
   void prix(const int &p);
   void gare_arrivee(const std::string &gare);
   void gare_depart(const std::string gare);
-  bool disponible(const std::string &gare, const Heure &h) const;
+  bool disponible(const std::string &gare, const Heure &h, const bool &multiday) const;
   bool est_pieton()const;
   void est_pieton(const bool &res);
 };

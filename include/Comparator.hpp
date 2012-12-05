@@ -1,18 +1,13 @@
 #ifndef _H_COMPARATOR
 #define _H_COMPARATOR
-#include <iostream>
-#include "Bdd.hpp"
 #include "Etape.hpp"
+#include <list>
 class Comparator{
 private:
-  int type_of_comparison;
+  float ratio;
 public:
-  Comparator(const int &type);
-  Comparator();
-  bool operator()(const Etape &etape1, const Etape &etape2) const;
-  
-  
-  
+  Comparator(const float &i);
+  bool operator()(const Etape &etape1, const Etape &etape2) const; 
 };
 
 #endif

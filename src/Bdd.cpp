@@ -16,14 +16,14 @@
     std::multimap< std::string,Ligne_Bdd > ();
   }
   
-  std::list<Ligne_Bdd*> Bdd::get_disponibles(const std::string &gare, const Heure &heure)
+  std::list<Ligne_Bdd*> Bdd::get_disponibles(const std::string &gare, const Heure &heure, const bool&multiday)
   {
       std::list<Ligne_Bdd*> resultat;
       std::pair< std::multimap<std::string,Ligne_Bdd >::iterator, std::multimap<std::string,Ligne_Bdd >::iterator > bornes = equal_range(gare);
       std::multimap<std::string,Ligne_Bdd >::iterator it=bornes.first;
       while(it!=bornes.second)
       {
-	if((*it).second.disponible(gare,heure))
+	if((*it).second.disponible(gare,heure,multiday))
 	{
 	  //std::cout<<(*it).second.gare_arrivee()<<"\n";
 	  resultat.push_back(&((*it).second));

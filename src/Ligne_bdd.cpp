@@ -41,9 +41,16 @@
     _gare_depart=gare;
   }
   
-  bool Ligne_Bdd::disponible(const std::string &gare, const Heure &h) const
+  bool Ligne_Bdd::disponible(const std::string &gare, const Heure &h, const bool &multiday) const
   {
-    return !(_gare_depart!=gare || h>_h_depart || (_pieton && h+_h_arrivee<h));
+    if(!multiday)
+    {
+     return !(_gare_depart!=gare || h>_h_depart || (_pieton && h+_h_arrivee<h)); 
+    }
+    else
+    {
+      return !(_gare_depart!=gare);
+    }
   }
   
   Ligne_Bdd::Ligne_Bdd():_pieton(false){}

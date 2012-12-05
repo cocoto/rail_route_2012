@@ -2,6 +2,7 @@
 #define _H_ETAPE
 #include <iostream>
 #include <set>
+#include <list>
 #include "Ligne_bdd.hpp"
 class Etape{
 public:

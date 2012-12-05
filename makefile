@@ -17,12 +17,12 @@ else
 endif
 
 all : $(EXEC)
-bin/prog: Ligne_bdd.o Heure.o Bdd.o main.o Etape.o Comparator.o Solver.o
+bin/prog: Ligne_bdd.o Heure.o Bdd.o main.o Etape.o Comparator.o Solver.o Comparator_Etape.o
 	$(CC) $^ -o $@ $(FLAGS)
 bin/generateur: generateur.o Heure.o
 	$(CC) $^ -o $@ $(FLAGS)
 
-bin/gtk_prog: gtk_main_gui.o gtk_Fenetre.o Bdd.o Heure.o Ligne_bdd.o Solver.o Comparator.o
+bin/gtk_prog: gtk_main_gui.o gtk_Fenetre.o Bdd.o Heure.o Ligne_bdd.o Solver.o Comparator.o Comparator_Etape.o
 	$(CC) $^ -o $@ $(FLAGS) `pkg-config --libs gtkmm-3.0`
 
 gtk_%.o: src/gtk_%.cpp

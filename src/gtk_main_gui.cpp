@@ -30,7 +30,7 @@
   void Gtk_main_gui::rechercher(const std::string &depart,const std::string &arrivee, const int &hdepart, const int &mdepart, const float &rapport)
   {
     std::ostringstream str_out;
-    std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(depart,arrivee,Heure(hdepart,mdepart),rapport,*_bdd);
+    std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(depart,arrivee,Heure(hdepart,mdepart),rapport,*_bdd,false,Heure(0));
     str_out<<resultat.size()<<" trajets ont étés trouvés :\n";
   
   std::list<Ligne_Bdd*>::const_iterator it;

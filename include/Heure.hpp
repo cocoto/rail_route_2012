@@ -1,6 +1,6 @@
 #ifndef HEURE_H
 #define HEURE_H
-
+#include <ostream>
 class Heure{
  private :
    int minutes;
@@ -35,3 +35,4 @@ public:
  void set(const int &h, const int &m);
 };
 #endif//HEURE_H
+std::ostream& operator<<(std::ostream &flux, const Heure &heure);

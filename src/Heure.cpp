@@ -1,12 +1,12 @@
 #include "Heure.hpp"
 Heure::Heure():minutes(0){}
 Heure::Heure(const int &h,const int &m){
-  minutes=(h*60+m)/1440;
+  minutes=(h*60+m)%1440;
 }
 
 Heure::Heure(const int &m)
 {
-  minutes=m/1440;
+  minutes=m%1440;
 }
 
 Heure Heure::operator+(const Heure &b)const{
@@ -42,35 +42,35 @@ Heure Heure::operator-(const int &m)const
 
  Heure& Heure::operator+=(const Heure &b)
 {
-  minutes=(minutes+b.minutes)/1440;
+  minutes=(minutes+b.minutes)%1440;
   return *this;
 }
 Heure& Heure::operator-=(const Heure &b)
 {
   if(minutes<b.minutes)
   {
-    minutes=(1440*(minutes/b.minutes+1)+minutes-b.minutes)/1440;
+    minutes=(1440*(minutes/b.minutes+1)+minutes-b.minutes)%1440;
   }
   else
   {
-   minutes=(minutes-b.minutes)/1440; 
+   minutes=(minutes-b.minutes)%1440; 
   }
   return *this;
 }
 Heure& Heure::operator+=(const int &m)
 {
-  minutes=(minutes+m)/1440;
+  minutes=(minutes+m)%1440;
   return *this;
 }
 Heure& Heure::operator-=(const int &m)
 {
   if(minutes<m)
   {
-    minutes=(1440*(minutes/m+1)+minutes-m)/1440;
+    minutes=(1440*(minutes/m+1)+minutes-m)%1440;
   }
   else
   {
-   minutes=(minutes-m)/1440; 
+   minutes=(minutes-m)%1440; 
   }
   return *this;
 }
@@ -111,5 +111,11 @@ bool Heure::operator!=(const Heure&b)const
 }
 
 void Heure::set(const int &h, const int &m){
-  minutes=(h*60+m)/1440;
+  minutes=(h*60+m)%1440;
+}
+
+std::ostream& operator<<(std::ostream &flux, const Heure &heure)
+{
+  flux<<((heure.heure()<10)?"0":"")<< heure.heure()<<":"<<((heure.minute()<10)?"0":"")<<heure.minute();
+  return flux;
 }

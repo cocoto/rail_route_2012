@@ -1,0 +1,17 @@
+15
+Paris Austerlitz
+Paris GareNord
+Paris Montparnasse
+Bordeaux SaintJean
+Nantes SNCF
+Marseille SaintCharles
+Larochelle Ville
+Lyon PartDieu
+Orléans SNCF
+Poitiers SNCF
+Clermont-Ferrand SNCF
+Bruxelles Central
+Bruxelles Midi
+Lille Flandres
+Toulouse Montabiau
+

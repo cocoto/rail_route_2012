@@ -1,0 +1,7 @@
+Ville: Paris 
+Austerlitz GareNord 15
+GareNord Montparnasse 30
+Montparnasse Austerlitz 20
+
+Ville: Bruxelles
+Midi Central 30

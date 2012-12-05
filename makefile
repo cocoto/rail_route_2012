@@ -26,7 +26,7 @@ bin/gtk_prog: Bdd.o Heure.o Ligne_bdd.o Solver.o Comparator.o Comparator_Etape.o
 	$(CC) $^ -o $@ $(FLAGS) `pkg-config --libs --cflags gtkmm-3.0`
 
 gtk_%.o: src/gtk_%.cpp
-	$(CC) -c $^ $(FLAGS) `pkg-config --cflags --libs gtkmm-3.0`
+	$(CC) -c $^ $(FLAGS) `pkg-config --cflags gtkmm-3.0`
 %.o : src/%.cpp
 	$(CC)  -c $^ $(FLAGS)
 clean:

@@ -50,6 +50,13 @@ Heure& Heure::operator-=(const int &m)
   return *this;
 }
 
+Heure& Heure::operator=(const Heure &h)
+{
+  minutes=h.minutes;
+  return *this;
+}
+
+
 int Heure::jour() const
 {
   return (minutes/60)/24;

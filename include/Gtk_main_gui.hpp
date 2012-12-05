@@ -13,7 +13,7 @@ public:
   void load_file(std::string file);
   void load_file_ville(std::string file);
   void clear_problem();
-  void rechercher(const std::string &depart,const std::string &arrivee, const int &hdepart, const int &mdepart, const float &rapport);
+  void rechercher();
 };
 
 #endif

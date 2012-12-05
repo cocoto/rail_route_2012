@@ -20,6 +20,7 @@ public:
  Heure& operator-=(const Heure &b);
  Heure& operator+=(const int &m);
  Heure& operator-=(const int &m);
+ Heure& operator=(const Heure &h);
  
  //Opérateurs de comparaison
  bool operator==(const Heure&b)const;

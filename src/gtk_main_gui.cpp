@@ -27,10 +27,10 @@
     _bdd->effacer();
     _fenetre->vider_ville();
   }
-  void Gtk_main_gui::rechercher(const std::string &depart,const std::string &arrivee, const int &hdepart, const int &mdepart, const float &rapport)
+  void Gtk_main_gui::rechercher()
   {
     std::ostringstream str_out;
-    std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(depart,arrivee,Heure(hdepart,mdepart),rapport,*_bdd,false,Heure(0));
+    std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(_fenetre->gare_d(),_fenetre->gare_a(),Heure(_fenetre->h_d(),_fenetre->m_d(),_fenetre->day_d()),_fenetre->rapport(),*_bdd,_fenetre->is_ar(),Heure(_fenetre->h_a(),_fenetre->m_a(),_fenetre->day_a()),_fenetre->travel_class());
     str_out<<resultat.size()<<" trajets ont étés trouvés :\n";
   
   std::list<Ligne_Bdd*>::const_iterator it;
@@ -38,7 +38,7 @@
   while(rit!=resultat.rend())
   {
     //Affichage de la solution
-    str_out<<"=================================\nHeure d'arrivée : "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n-------------\n";
+    str_out<<"=================================\nArrivée le "<<Glib::Date(rit->heure.jour()).format_string("%x")<<" à "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n-------------\n";
     it=((*rit).trajets_effectues.begin());
     while(it!=(*rit).trajets_effectues.end())
     {

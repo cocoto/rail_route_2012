@@ -39,7 +39,7 @@ int main(const int argc, const char** argv)
     }
     for(i=0;i<atoi(argv[2]);i++)
     {
-      std::cout<<"Feuille:\n";
+      std::cout<<"Feuille :\n";
       std::cout<<"25:00 ";
       heure.set(rand()%24,rand()%60);
       std::cout<<heure<<" ";
@@ -60,7 +60,7 @@ int main(const int argc, const char** argv)
 	old_gare=new_gare;
 	max--;
       }
-      std::cout<<"Prixh:"<<rand()%100<<"\n\n";
+      std::cout<<"prixh : "<<rand()%100<<"\n\n";
     }
   }
   else

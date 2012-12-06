@@ -29,9 +29,10 @@
   }
   void Gtk_main_gui::rechercher()
   {
+    bool ar=_fenetre->is_ar();
     std::ostringstream str_out;
     std::string ville_arrivee=_fenetre->gare_a();
-    std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(_fenetre->gare_d(),_fenetre->gare_a(),Heure(_fenetre->h_d(),_fenetre->m_d(),_fenetre->day_d()),_fenetre->rapport(),*_bdd,_fenetre->is_ar(),Heure(_fenetre->h_a(),_fenetre->m_a(),_fenetre->day_a()),_fenetre->travel_class());
+    std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(_fenetre->gare_d(),ville_arrivee,Heure(_fenetre->h_d(),_fenetre->m_d(),_fenetre->day_d()),_fenetre->rapport(),*_bdd,ar,Heure(_fenetre->h_a(),_fenetre->m_a(),_fenetre->day_a()),_fenetre->travel_class());
     str_out<<resultat.size()<<" trajets ont étés trouvés :\n";
   
   std::list<Ligne_Bdd*>::const_iterator it;
@@ -39,7 +40,11 @@
   while(rit!=resultat.rend())
   {
     //Affichage de la solution
-    str_out<<"\n\n=================================\nArrivée le "<<Glib::Date(rit->heure.jour()).format_string("%x")<<" à "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n-------------  Trajet Aller :   -------------\n";
+    str_out<<"\n\n=================================\nArrivée le "<<Glib::Date(rit->heure.jour()).format_string("%x")<<" à "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n";
+    if(ar)
+    {
+     str_out<<"\n-------------  Trajet Aller :   -------------\n"; 
+    }
     it=((*rit).trajets_effectues.begin());
     while(it!=(*rit).trajets_effectues.end())
     {
@@ -51,7 +56,7 @@
       {
 	str_out<<"Prendre le train de "<<(*it)->h_depart()<<" en direction de "<<(*it)->gare_arrivee()<<" (arrivée à "<<(*it)-> h_arrivee()<<")\n";
       }
-      if((*it)->gare_arrivee()==ville_arrivee)
+      if((*it)->gare_arrivee()==ville_arrivee && ar)
       {
 	str_out<<"\n-------------  Trajet Retour :   -------------\n";
       }

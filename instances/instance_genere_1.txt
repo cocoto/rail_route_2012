@@ -1,0 +1,921 @@
+Feuille :
+25:00 04:09 Larochelle Ville
+06:03 06:09 Marseille SaintCharles
+08:37 08:44 Lille Flandres
+09:35 09:54 Paris Austerlitz
+prixh : 50
+
+Feuille :
+25:00 17:04 Lille Flandres
+17:27 17:41 Marseille SaintCharles
+17:45 18:02 Lille Flandres
+18:13 18:30 Paris GareNord
+19:39 19:42 Paris Montparnasse
+20:15 20:27 Orléans SNCF
+23:13 23:21 Paris Montparnasse
+prixh : 65
+
+Feuille :
+25:00 15:23 Paris Montparnasse
+16:22 16:25 Marseille SaintCharles
+17:34 17:53 Lille Flandres
+18:23 18:42 Larochelle Ville
+19:06 19:10 Paris Montparnasse
+20:44 20:58 Lille Flandres
+21:09 21:14 Orléans SNCF
+21:30 21:40 Bordeaux SaintJean
+23:59 23:59 Bruxelles Midi
+prixh : 79
+
+Feuille :
+25:00 15:10 Nantes SNCF
+18:01 18:04 Paris GareNord
+19:38 19:46 Bordeaux SaintJean
+19:51 19:58 Clermont-Ferrand SNCF
+21:34 21:34 Bruxelles Central
+22:35 22:53 Paris Austerlitz
+23:15 23:21 Nantes SNCF
+prixh : 53
+
+Feuille :
+25:00 20:36 Orléans SNCF
+23:27 23:33 Toulouse Montabiau
+prixh : 10
+
+Feuille :
+25:00 21:48 Paris Austerlitz
+22:36 22:36 Larochelle Ville
+23:50 23:50 Paris GareNord
+prixh : 7
+
+Feuille :
+25:00 20:39 Poitiers SNCF
+prixh : 72
+
+Feuille :
+25:00 02:37 Orléans SNCF
+03:13 03:22 Paris Montparnasse
+03:27 03:36 Clermont-Ferrand SNCF
+04:13 04:14 Bordeaux SaintJean
+04:57 05:00 Lille Flandres
+prixh : 36
+
+Feuille :
+25:00 08:48 Paris Montparnasse
+prixh : 22
+
+Feuille :
+25:00 01:14 Bordeaux SaintJean
+03:46 03:52 Clermont-Ferrand SNCF
+prixh : 92
+
+Feuille :
+25:00 14:58 Paris Montparnasse
+17:25 17:36 Toulouse Montabiau
+20:12 20:16 Paris Montparnasse
+20:29 20:46 Bruxelles Midi
+21:42 21:42 Bruxelles Central
+21:46 21:47 Toulouse Montabiau
+23:14 23:15 Orléans SNCF
+prixh : 90
+
+Feuille :
+25:00 06:54 Lille Flandres
+09:18 09:27 Larochelle Ville
+09:41 09:44 Poitiers SNCF
+10:12 10:22 Clermont-Ferrand SNCF
+10:44 10:51 Paris GareNord
+12:09 12:25 Larochelle Ville
+14:40 14:43 Poitiers SNCF
+14:59 15:00 Lille Flandres
+prixh : 97
+
+Feuille :
+25:00 02:15 Marseille SaintCharles
+02:23 02:40 Bordeaux SaintJean
+03:31 03:35 Bruxelles Midi
+04:27 04:42 Bruxelles Central
+prixh : 21
+
+Feuille :
+25:00 02:32 Larochelle Ville
+02:57 03:16 Marseille SaintCharles
+03:57 04:14 Paris Montparnasse
+06:57 07:05 Clermont-Ferrand SNCF
+08:46 09:03 Bruxelles Central
+11:02 11:10 Lyon PartDieu
+12:47 13:02 Larochelle Ville
+prixh : 1
+
+Feuille :
+25:00 19:04 Lille Flandres
+21:43 21:53 Clermont-Ferrand SNCF
+22:04 22:12 Nantes SNCF
+22:59 22:59 Poitiers SNCF
+23:40 23:49 Larochelle Ville
+prixh : 66
+
+Feuille :
+25:00 09:33 Paris GareNord
+10:47 11:01 Larochelle Ville
+11:15 11:23 Marseille SaintCharles
+13:14 13:29 Bruxelles Central
+14:53 15:12 Clermont-Ferrand SNCF
+16:05 16:13 Bruxelles Central
+19:08 19:16 Poitiers SNCF
+prixh : 95
+
+Feuille :
+25:00 13:27 Clermont-Ferrand SNCF
+13:49 13:54 Bruxelles Midi
+15:14 15:24 Poitiers SNCF
+17:00 17:16 Orléans SNCF
+prixh : 63
+
+Feuille :
+25:00 02:14 Bruxelles Central
+prixh : 81
+
+Feuille :
+25:00 08:26 Paris GareNord
+11:14 11:33 Marseille SaintCharles
+11:33 11:39 Larochelle Ville
+13:40 13:41 Clermont-Ferrand SNCF
+16:07 16:24 Poitiers SNCF
+17:04 17:18 Larochelle Ville
+19:18 19:34 Lyon PartDieu
+21:03 21:15 Paris Austerlitz
+22:02 22:21 Marseille SaintCharles
+23:06 23:15 Paris GareNord
+prixh : 87
+
+Feuille :
+25:00 02:15 Lille Flandres
+02:51 02:51 Bruxelles Midi
+05:33 05:34 Bordeaux SaintJean
+05:41 05:49 Bruxelles Midi
+05:57 06:05 Lille Flandres
+07:26 07:27 Poitiers SNCF
+09:10 09:20 Toulouse Montabiau
+prixh : 9
+
+Feuille :
+25:00 00:22 Larochelle Ville
+02:41 02:46 Marseille SaintCharles
+03:52 04:04 Bruxelles Central
+07:02 07:18 Paris GareNord
+07:28 07:46 Paris Austerlitz
+08:22 08:40 Clermont-Ferrand SNCF
+09:58 10:04 Paris Austerlitz
+11:43 11:51 Larochelle Ville
+13:54 13:57 Bruxelles Central
+16:21 16:25 Clermont-Ferrand SNCF
+18:37 18:38 Lyon PartDieu
+20:09 20:27 Bruxelles Midi
+20:57 21:08 Clermont-Ferrand SNCF
+23:32 23:33 Larochelle Ville
+prixh : 35
+
+Feuille :
+25:00 04:52 Marseille SaintCharles
+prixh : 90
+
+Feuille :
+25:00 06:15 Orléans SNCF
+07:24 07:32 Toulouse Montabiau
+08:37 08:49 Clermont-Ferrand SNCF
+09:18 09:34 Larochelle Ville
+10:08 10:17 Marseille SaintCharles
+13:14 13:22 Clermont-Ferrand SNCF
+14:41 14:52 Marseille SaintCharles
+15:08 15:20 Bruxelles Central
+18:03 18:19 Clermont-Ferrand SNCF
+18:37 18:53 Paris Montparnasse
+19:18 19:25 Bruxelles Central
+21:05 21:13 Poitiers SNCF
+22:19 22:29 Bruxelles Midi
+22:57 23:04 Clermont-Ferrand SNCF
+prixh : 9
+
+Feuille :
+25:00 12:28 Lille Flandres
+13:53 14:11 Nantes SNCF
+14:26 14:32 Toulouse Montabiau
+14:51 15:00 Paris Austerlitz
+15:06 15:25 Toulouse Montabiau
+15:49 15:53 Larochelle Ville
+17:35 17:51 Toulouse Montabiau
+18:59 19:17 Marseille SaintCharles
+21:36 21:36 Clermont-Ferrand SNCF
+prixh : 78
+
+Feuille :
+25:00 02:40 Paris GareNord
+04:04 04:19 Lille Flandres
+06:01 06:07 Marseille SaintCharles
+07:07 07:17 Paris GareNord
+09:26 09:37 Orléans SNCF
+11:05 11:05 Paris Montparnasse
+13:09 13:17 Toulouse Montabiau
+14:38 14:42 Poitiers SNCF
+15:16 15:24 Paris GareNord
+17:15 17:21 Bordeaux SaintJean
+18:38 18:43 Marseille SaintCharles
+19:17 19:17 Clermont-Ferrand SNCF
+21:33 21:39 Paris GareNord
+prixh : 29
+
+Feuille :
+25:00 03:29 Bordeaux SaintJean
+prixh : 42
+
+Feuille :
+25:00 12:39 Bruxelles Central
+14:51 15:01 Bordeaux SaintJean
+15:33 15:48 Paris Austerlitz
+18:08 18:26 Larochelle Ville
+prixh : 39
+
+Feuille :
+25:00 16:01 Nantes SNCF
+16:51 17:07 Poitiers SNCF
+18:05 18:19 Paris Montparnasse
+20:26 20:29 Bruxelles Midi
+20:47 21:02 Toulouse Montabiau
+22:47 23:06 Bordeaux SaintJean
+prixh : 84
+
+Feuille :
+25:00 11:23 Larochelle Ville
+11:30 11:38 Bruxelles Midi
+14:06 14:13 Clermont-Ferrand SNCF
+15:52 15:52 Bruxelles Central
+16:27 16:36 Paris GareNord
+18:07 18:11 Paris Austerlitz
+20:48 20:49 Lyon PartDieu
+22:10 22:28 Paris Montparnasse
+23:40 23:50 Larochelle Ville
+prixh : 88
+
+Feuille :
+25:00 13:43 Bordeaux SaintJean
+16:05 16:20 Bruxelles Central
+17:22 17:36 Paris GareNord
+19:25 19:25 Clermont-Ferrand SNCF
+21:55 21:56 Paris Austerlitz
+22:55 23:00 Orléans SNCF
+prixh : 95
+
+Feuille :
+25:00 00:35 Bruxelles Midi
+00:48 00:55 Lyon PartDieu
+02:37 02:54 Marseille SaintCharles
+05:16 05:28 Larochelle Ville
+06:53 06:56 Marseille SaintCharles
+prixh : 61
+
+Feuille :
+25:00 14:21 Lyon PartDieu
+16:48 16:55 Poitiers SNCF
+19:44 19:45 Paris GareNord
+20:06 20:12 Poitiers SNCF
+23:08 23:21 Orléans SNCF
+prixh : 49
+
+Feuille :
+25:00 13:53 Orléans SNCF
+16:03 16:17 Nantes SNCF
+19:12 19:27 Toulouse Montabiau
+22:25 22:36 Paris Montparnasse
+23:31 23:40 Clermont-Ferrand SNCF
+prixh : 78
+
+Feuille :
+25:00 18:08 Nantes SNCF
+18:35 18:45 Bruxelles Central
+18:58 19:07 Lyon PartDieu
+21:25 21:25 Orléans SNCF
+22:28 22:33 Paris GareNord
+22:37 22:49 Bruxelles Central
+23:54 23:55 Larochelle Ville
+prixh : 95
+
+Feuille :
+25:00 17:08 Larochelle Ville
+19:00 19:07 Bruxelles Midi
+19:17 19:24 Toulouse Montabiau
+21:08 21:25 Bruxelles Central
+23:41 23:54 Paris Montparnasse
+prixh : 75
+
+Feuille :
+25:00 20:48 Bordeaux SaintJean
+21:28 21:41 Nantes SNCF
+22:37 22:55 Paris Austerlitz
+23:18 23:29 Toulouse Montabiau
+prixh : 8
+
+Feuille :
+25:00 20:39 Larochelle Ville
+22:04 22:09 Paris GareNord
+23:06 23:11 Lyon PartDieu
+prixh : 92
+
+Feuille :
+25:00 19:02 Orléans SNCF
+20:23 20:29 Bordeaux SaintJean
+22:43 22:51 Larochelle Ville
+23:12 23:19 Lyon PartDieu
+prixh : 97
+
+Feuille :
+25:00 21:14 Nantes SNCF
+23:34 23:34 Paris GareNord
+prixh : 44
+
+Feuille :
+25:00 15:39 Bruxelles Midi
+18:09 18:16 Clermont-Ferrand SNCF
+19:50 19:51 Larochelle Ville
+20:56 21:12 Nantes SNCF
+22:31 22:42 Orléans SNCF
+23:19 23:38 Larochelle Ville
+prixh : 48
+
+Feuille :
+25:00 07:46 Bruxelles Central
+08:18 08:25 Larochelle Ville
+08:55 09:14 Toulouse Montabiau
+09:49 10:00 Poitiers SNCF
+10:17 10:33 Clermont-Ferrand SNCF
+10:49 11:00 Toulouse Montabiau
+12:17 12:27 Bruxelles Central
+13:13 13:22 Bruxelles Midi
+14:59 15:13 Bruxelles Central
+17:22 17:27 Marseille SaintCharles
+19:14 19:14 Orléans SNCF
+20:54 21:07 Lyon PartDieu
+22:49 22:52 Bordeaux SaintJean
+22:55 23:05 Poitiers SNCF
+prixh : 15
+
+Feuille :
+25:00 01:19 Bruxelles Midi
+03:48 04:01 Paris Austerlitz
+04:40 04:55 Paris GareNord
+07:03 07:22 Paris Austerlitz
+09:45 09:46 Paris GareNord
+11:06 11:09 Nantes SNCF
+12:10 12:13 Toulouse Montabiau
+14:19 14:29 Orléans SNCF
+15:10 15:10 Paris GareNord
+18:02 18:12 Bruxelles Central
+19:15 19:22 Orléans SNCF
+21:53 22:09 Bruxelles Central
+22:25 22:32 Poitiers SNCF
+22:36 22:44 Paris GareNord
+23:23 23:32 Bordeaux SaintJean
+prixh : 43
+
+Feuille :
+25:00 10:44 Bruxelles Central
+12:27 12:41 Poitiers SNCF
+13:25 13:41 Paris GareNord
+14:41 14:41 Bruxelles Central
+14:52 14:55 Paris GareNord
+15:06 15:20 Nantes SNCF
+18:04 18:06 Paris Montparnasse
+20:39 20:40 Paris Austerlitz
+prixh : 61
+
+Feuille :
+25:00 10:05 Bruxelles Midi
+11:58 12:04 Lyon PartDieu
+14:46 14:51 Bruxelles Midi
+17:27 17:33 Bruxelles Central
+17:45 17:52 Bordeaux SaintJean
+19:24 19:35 Larochelle Ville
+20:31 20:33 Paris Montparnasse
+21:15 21:16 Poitiers SNCF
+22:09 22:17 Bruxelles Midi
+22:30 22:45 Orléans SNCF
+23:53 23:56 Bruxelles Midi
+prixh : 93
+
+Feuille :
+25:00 20:11 Lyon PartDieu
+21:56 22:13 Toulouse Montabiau
+23:40 23:48 Bruxelles Midi
+prixh : 50
+
+Feuille :
+25:00 18:04 Paris GareNord
+19:58 20:13 Lille Flandres
+22:50 23:07 Toulouse Montabiau
+prixh : 14
+
+Feuille :
+25:00 05:17 Paris Montparnasse
+05:58 06:06 Orléans SNCF
+08:39 08:52 Bruxelles Central
+09:58 10:06 Orléans SNCF
+11:42 11:53 Clermont-Ferrand SNCF
+14:34 14:46 Orléans SNCF
+prixh : 75
+
+Feuille :
+25:00 15:15 Marseille SaintCharles
+15:47 16:06 Nantes SNCF
+16:52 17:01 Paris Austerlitz
+18:19 18:25 Bordeaux SaintJean
+20:31 20:39 Bruxelles Central
+23:11 23:13 Nantes SNCF
+prixh : 83
+
+Feuille :
+25:00 13:40 Lille Flandres
+15:52 15:55 Clermont-Ferrand SNCF
+17:48 17:56 Nantes SNCF
+19:16 19:19 Toulouse Montabiau
+19:22 19:40 Paris GareNord
+20:14 20:21 Paris Montparnasse
+20:36 20:45 Bruxelles Midi
+23:26 23:38 Bruxelles Central
+prixh : 50
+
+Feuille :
+25:00 01:10 Toulouse Montabiau
+01:58 02:02 Clermont-Ferrand SNCF
+04:25 04:30 Lyon PartDieu
+06:28 06:43 Paris GareNord
+09:37 09:47 Bruxelles Central
+10:47 11:00 Nantes SNCF
+12:46 13:05 Orléans SNCF
+14:15 14:30 Nantes SNCF
+17:15 17:31 Bordeaux SaintJean
+18:49 19:07 Lille Flandres
+20:38 20:52 Nantes SNCF
+21:03 21:14 Larochelle Ville
+prixh : 94
+
+Feuille :
+25:00 08:36 Paris Montparnasse
+11:26 11:37 Lille Flandres
+12:09 12:21 Clermont-Ferrand SNCF
+13:25 13:42 Larochelle Ville
+16:16 16:23 Bruxelles Central
+17:17 17:21 Marseille SaintCharles
+18:18 18:20 Paris Austerlitz
+19:31 19:44 Clermont-Ferrand SNCF
+21:51 22:07 Larochelle Ville
+22:21 22:31 Nantes SNCF
+22:49 23:04 Paris Austerlitz
+prixh : 58
+
+Feuille :
+25:00 13:26 Clermont-Ferrand SNCF
+14:30 14:37 Toulouse Montabiau
+15:18 15:34 Nantes SNCF
+17:54 18:01 Marseille SaintCharles
+18:46 19:05 Poitiers SNCF
+19:32 19:34 Bruxelles Midi
+22:07 22:14 Marseille SaintCharles
+22:41 22:56 Bordeaux SaintJean
+23:48 23:51 Larochelle Ville
+prixh : 67
+
+Feuille :
+25:00 22:46 Marseille SaintCharles
+prixh : 12
+
+Feuille :
+25:00 08:15 Lyon PartDieu
+09:52 10:00 Bordeaux SaintJean
+10:57 11:04 Orléans SNCF
+prixh : 22
+
+Feuille :
+25:00 02:59 Paris Montparnasse
+03:29 03:44 Clermont-Ferrand SNCF
+prixh : 37
+
+Feuille :
+25:00 15:16 Paris Austerlitz
+18:02 18:05 Bruxelles Midi
+19:37 19:42 Paris Montparnasse
+21:06 21:16 Clermont-Ferrand SNCF
+22:36 22:38 Paris Montparnasse
+23:11 23:13 Marseille SaintCharles
+prixh : 67
+
+Feuille :
+25:00 23:49 Larochelle Ville
+prixh : 9
+
+Feuille :
+25:00 05:23 Larochelle Ville
+07:32 07:40 Toulouse Montabiau
+09:56 09:56 Poitiers SNCF
+12:50 12:54 Lyon PartDieu
+14:21 14:30 Paris GareNord
+15:13 15:32 Bordeaux SaintJean
+16:28 16:41 Bruxelles Midi
+19:26 19:41 Paris Montparnasse
+22:13 22:18 Toulouse Montabiau
+23:48 23:57 Larochelle Ville
+prixh : 49
+
+Feuille :
+25:00 06:07 Paris Austerlitz
+08:38 08:57 Clermont-Ferrand SNCF
+09:00 09:18 Nantes SNCF
+09:45 10:02 Orléans SNCF
+11:51 11:52 Lyon PartDieu
+14:32 14:36 Bordeaux SaintJean
+15:22 15:24 Paris GareNord
+17:20 17:28 Lille Flandres
+18:46 19:00 Larochelle Ville
+prixh : 69
+
+Feuille :
+25:00 07:23 Larochelle Ville
+08:14 08:28 Paris GareNord
+08:46 09:03 Lille Flandres
+10:40 10:54 Bordeaux SaintJean
+13:01 13:01 Larochelle Ville
+13:13 13:23 Lyon PartDieu
+13:29 13:35 Orléans SNCF
+15:37 15:43 Toulouse Montabiau
+16:55 16:55 Marseille SaintCharles
+17:16 17:19 Bordeaux SaintJean
+18:24 18:35 Paris GareNord
+19:54 20:11 Clermont-Ferrand SNCF
+22:40 22:54 Orléans SNCF
+22:59 23:08 Larochelle Ville
+prixh : 37
+
+Feuille :
+25:00 19:36 Orléans SNCF
+prixh : 1
+
+Feuille :
+25:00 22:45 Toulouse Montabiau
+23:56 23:57 Lyon PartDieu
+prixh : 93
+
+Feuille :
+25:00 18:37 Lyon PartDieu
+20:59 21:11 Paris Montparnasse
+prixh : 13
+
+Feuille :
+25:00 13:23 Clermont-Ferrand SNCF
+13:39 13:52 Lyon PartDieu
+15:29 15:41 Paris GareNord
+17:46 17:49 Clermont-Ferrand SNCF
+20:35 20:51 Paris Montparnasse
+22:15 22:31 Clermont-Ferrand SNCF
+23:27 23:40 Poitiers SNCF
+prixh : 23
+
+Feuille :
+25:00 18:31 Marseille SaintCharles
+19:51 20:05 Bordeaux SaintJean
+21:11 21:28 Nantes SNCF
+23:51 23:53 Marseille SaintCharles
+prixh : 17
+
+Feuille :
+25:00 06:54 Toulouse Montabiau
+08:42 08:46 Marseille SaintCharles
+11:12 11:12 Toulouse Montabiau
+12:54 13:02 Clermont-Ferrand SNCF
+14:42 14:44 Nantes SNCF
+16:07 16:12 Bordeaux SaintJean
+18:17 18:26 Paris Austerlitz
+19:25 19:34 Larochelle Ville
+20:42 21:00 Orléans SNCF
+prixh : 71
+
+Feuille :
+25:00 11:36 Bruxelles Midi
+13:32 13:37 Marseille SaintCharles
+16:29 16:44 Orléans SNCF
+17:56 18:01 Larochelle Ville
+18:42 18:44 Paris GareNord
+21:39 21:42 Poitiers SNCF
+21:46 21:49 Toulouse Montabiau
+23:45 23:59 Marseille SaintCharles
+prixh : 50
+
+Feuille :
+25:00 10:50 Orléans SNCF
+prixh : 81
+
+Feuille :
+25:00 11:36 Toulouse Montabiau
+12:19 12:35 Marseille SaintCharles
+13:39 13:57 Clermont-Ferrand SNCF
+15:58 16:07 Lille Flandres
+17:22 17:34 Orléans SNCF
+18:52 18:58 Clermont-Ferrand SNCF
+21:00 21:17 Larochelle Ville
+21:38 21:57 Lille Flandres
+22:54 23:05 Nantes SNCF
+prixh : 51
+
+Feuille :
+25:00 00:28 Paris Montparnasse
+01:40 01:58 Lille Flandres
+04:37 04:39 Nantes SNCF
+07:14 07:21 Paris Montparnasse
+08:11 08:30 Poitiers SNCF
+11:27 11:39 Bordeaux SaintJean
+13:05 13:18 Bruxelles Central
+13:55 14:11 Poitiers SNCF
+prixh : 7
+
+Feuille :
+25:00 14:08 Lille Flandres
+16:35 16:35 Marseille SaintCharles
+18:06 18:16 Clermont-Ferrand SNCF
+19:26 19:31 Poitiers SNCF
+20:01 20:01 Larochelle Ville
+21:55 21:58 Bordeaux SaintJean
+23:53 23:56 Lyon PartDieu
+prixh : 91
+
+Feuille :
+25:00 17:27 Bruxelles Midi
+19:45 19:58 Poitiers SNCF
+20:55 20:56 Paris Austerlitz
+23:43 23:52 Nantes SNCF
+prixh : 19
+
+Feuille :
+25:00 14:16 Clermont-Ferrand SNCF
+15:16 15:23 Larochelle Ville
+17:45 18:04 Nantes SNCF
+20:13 20:15 Toulouse Montabiau
+21:43 21:49 Orléans SNCF
+21:51 22:07 Marseille SaintCharles
+23:58 23:59 Clermont-Ferrand SNCF
+prixh : 3
+
+Feuille :
+25:00 03:55 Lille Flandres
+05:02 05:03 Nantes SNCF
+07:12 07:25 Bruxelles Central
+07:41 07:52 Nantes SNCF
+09:47 09:58 Lille Flandres
+11:56 12:11 Bordeaux SaintJean
+13:27 13:33 Paris Montparnasse
+13:43 13:49 Larochelle Ville
+15:52 16:01 Orléans SNCF
+18:59 19:08 Bordeaux SaintJean
+21:14 21:21 Clermont-Ferrand SNCF
+23:10 23:13 Bruxelles Central
+prixh : 73
+
+Feuille :
+25:00 04:00 Clermont-Ferrand SNCF
+05:00 05:08 Paris GareNord
+05:58 06:01 Nantes SNCF
+08:59 09:09 Lille Flandres
+09:17 09:25 Bruxelles Central
+09:29 09:38 Paris Montparnasse
+09:48 09:58 Bordeaux SaintJean
+12:57 13:05 Paris Montparnasse
+14:51 14:59 Larochelle Ville
+15:34 15:36 Lille Flandres
+18:15 18:34 Paris GareNord
+20:05 20:12 Poitiers SNCF
+prixh : 13
+
+Feuille :
+25:00 08:10 Bruxelles Midi
+08:20 08:20 Lille Flandres
+08:57 09:13 Poitiers SNCF
+10:46 11:05 Marseille SaintCharles
+12:28 12:47 Bruxelles Central
+13:59 14:05 Nantes SNCF
+14:25 14:34 Poitiers SNCF
+15:48 15:52 Nantes SNCF
+17:25 17:35 Marseille SaintCharles
+18:35 18:46 Nantes SNCF
+20:49 21:00 Paris GareNord
+22:07 22:21 Lille Flandres
+23:45 23:51 Paris Austerlitz
+prixh : 7
+
+Feuille :
+25:00 02:16 Nantes SNCF
+02:41 02:53 Larochelle Ville
+02:56 03:02 Bruxelles Central
+05:35 05:51 Bordeaux SaintJean
+08:28 08:45 Larochelle Ville
+11:05 11:22 Toulouse Montabiau
+13:25 13:28 Paris Montparnasse
+14:35 14:36 Poitiers SNCF
+14:57 14:57 Toulouse Montabiau
+15:09 15:16 Lille Flandres
+17:44 17:57 Paris Montparnasse
+19:49 19:59 Paris GareNord
+22:27 22:40 Bruxelles Midi
+prixh : 97
+
+Feuille :
+25:00 13:58 Marseille SaintCharles
+15:40 15:48 Bordeaux SaintJean
+18:00 18:17 Larochelle Ville
+20:32 20:41 Lille Flandres
+21:30 21:31 Nantes SNCF
+23:05 23:10 Orléans SNCF
+prixh : 68
+
+Feuille :
+25:00 20:40 Lille Flandres
+23:16 23:19 Marseille SaintCharles
+prixh : 88
+
+Feuille :
+25:00 22:47 Lyon PartDieu
+23:17 23:32 Paris Montparnasse
+prixh : 82
+
+Feuille :
+25:00 11:23 Clermont-Ferrand SNCF
+12:30 12:31 Bruxelles Midi
+14:27 14:29 Orléans SNCF
+16:46 17:05 Paris Montparnasse
+18:30 18:49 Orléans SNCF
+21:19 21:37 Larochelle Ville
+21:49 21:57 Bruxelles Central
+prixh : 53
+
+Feuille :
+25:00 07:16 Marseille SaintCharles
+07:37 07:44 Orléans SNCF
+prixh : 84
+
+Feuille :
+25:00 00:02 Paris GareNord
+02:09 02:26 Lille Flandres
+04:21 04:33 Larochelle Ville
+05:45 05:48 Paris Austerlitz
+06:17 06:32 Orléans SNCF
+07:23 07:36 Paris Austerlitz
+10:32 10:46 Bordeaux SaintJean
+10:55 10:57 Larochelle Ville
+12:19 12:22 Bruxelles Midi
+14:31 14:42 Bordeaux SaintJean
+prixh : 52
+
+Feuille :
+25:00 01:23 Lille Flandres
+02:50 03:01 Paris Montparnasse
+03:32 03:41 Larochelle Ville
+prixh : 94
+
+Feuille :
+25:00 06:40 Poitiers SNCF
+09:13 09:28 Paris Montparnasse
+11:57 12:06 Lille Flandres
+14:45 14:56 Bruxelles Central
+16:49 16:55 Orléans SNCF
+17:57 18:06 Nantes SNCF
+19:12 19:25 Orléans SNCF
+20:44 20:59 Bruxelles Midi
+23:29 23:42 Lille Flandres
+prixh : 12
+
+Feuille :
+25:00 23:26 Nantes SNCF
+prixh : 64
+
+Feuille :
+25:00 10:14 Bruxelles Central
+12:18 12:30 Lyon PartDieu
+15:05 15:20 Bordeaux SaintJean
+16:48 16:49 Lyon PartDieu
+18:40 18:44 Toulouse Montabiau
+prixh : 36
+
+Feuille :
+25:00 12:23 Bruxelles Central
+12:34 12:50 Bordeaux SaintJean
+14:25 14:28 Orléans SNCF
+17:07 17:11 Toulouse Montabiau
+17:56 18:14 Bordeaux SaintJean
+18:23 18:37 Marseille SaintCharles
+19:00 19:01 Paris GareNord
+19:04 19:05 Nantes SNCF
+21:04 21:08 Paris Montparnasse
+23:35 23:40 Bordeaux SaintJean
+prixh : 58
+
+Feuille :
+25:00 04:25 Bordeaux SaintJean
+04:33 04:49 Lille Flandres
+07:25 07:27 Nantes SNCF
+08:47 08:47 Orléans SNCF
+08:47 08:48 Toulouse Montabiau
+09:09 09:14 Bruxelles Central
+09:43 09:43 Bruxelles Midi
+10:53 11:04 Lille Flandres
+11:47 12:02 Orléans SNCF
+prixh : 25
+
+Feuille :
+25:00 03:54 Orléans SNCF
+05:10 05:26 Bordeaux SaintJean
+07:25 07:37 Lyon PartDieu
+prixh : 19
+
+Feuille :
+25:00 00:25 Nantes SNCF
+02:59 03:12 Orléans SNCF
+05:23 05:42 Lyon PartDieu
+07:33 07:52 Clermont-Ferrand SNCF
+09:15 09:17 Orléans SNCF
+11:47 11:58 Paris GareNord
+prixh : 47
+
+Feuille :
+25:00 00:17 Larochelle Ville
+01:57 02:09 Nantes SNCF
+02:48 03:05 Bruxelles Midi
+04:55 04:57 Paris GareNord
+05:36 05:55 Bruxelles Midi
+07:00 07:18 Orléans SNCF
+09:14 09:31 Lyon PartDieu
+11:46 11:53 Clermont-Ferrand SNCF
+13:25 13:29 Bruxelles Central
+14:18 14:29 Lille Flandres
+15:42 15:49 Larochelle Ville
+18:42 18:54 Bruxelles Central
+prixh : 24
+
+Feuille :
+25:00 09:01 Lyon PartDieu
+10:24 10:42 Bruxelles Midi
+13:18 13:21 Toulouse Montabiau
+13:53 14:03 Larochelle Ville
+prixh : 87
+
+Feuille :
+25:00 20:37 Bruxelles Midi
+20:41 20:51 Larochelle Ville
+23:07 23:07 Bruxelles Central
+prixh : 95
+
+Feuille :
+25:00 05:42 Poitiers SNCF
+06:47 06:47 Lyon PartDieu
+06:51 07:06 Paris Austerlitz
+09:49 10:07 Larochelle Ville
+10:33 10:43 Lille Flandres
+12:33 12:45 Bruxelles Central
+prixh : 58
+
+Feuille :
+25:00 20:30 Bruxelles Midi
+21:06 21:16 Orléans SNCF
+21:52 21:54 Nantes SNCF
+23:10 23:14 Lyon PartDieu
+prixh : 99
+
+Feuille :
+25:00 13:21 Lyon PartDieu
+14:15 14:22 Toulouse Montabiau
+14:59 15:16 Bruxelles Midi
+17:11 17:11 Clermont-Ferrand SNCF
+prixh : 46
+
+Feuille :
+25:00 07:52 Paris GareNord
+08:31 08:46 Paris Austerlitz
+09:11 09:12 Lille Flandres
+11:24 11:36 Nantes SNCF
+12:40 12:51 Bruxelles Central
+14:45 15:00 Poitiers SNCF
+17:48 17:51 Paris Austerlitz
+19:08 19:20 Lille Flandres
+19:32 19:44 Orléans SNCF
+21:34 21:51 Lyon PartDieu
+23:30 23:41 Paris GareNord
+prixh : 54
+
+Feuille :
+25:00 18:18 Toulouse Montabiau
+21:04 21:23 Poitiers SNCF
+21:27 21:43 Lille Flandres
+23:23 23:25 Toulouse Montabiau
+prixh : 37
+
+Feuille :
+25:00 18:43 Bruxelles Midi
+20:54 20:58 Nantes SNCF
+23:22 23:39 Larochelle Ville
+prixh : 86
+

@@ -38,7 +38,7 @@
     std::ifstream fichier_gares(gares_filename.c_str());
     std::string ligne("");
     Heure hdepart,harrive;
-    std::string garrearrive, garredepart,ville;
+    std::string garrearrive, garredepart,ville,poubelle;
     std::pair< std::string, Ligne_Bdd> paire;
     std::streampos position;
     Ligne_Bdd ligneBdd;
@@ -50,7 +50,7 @@
       ville="";
       while(!sortie)
       {
-	while(garredepart.compare(std::string("Ville:")))
+	while(garredepart.compare(std::string("Ville")))
 	{
 	  if(!(fichier_gares>>garredepart))
 	  {
@@ -58,11 +58,12 @@
 	    break;
 	  }
 	}
+	fichier_gares>>poubelle;
 	if(!sortie)
 	{
 	  fichier_gares>>ville;
 	  fichier_gares>>garredepart;
-	  while(garredepart!="Ville:")
+	  while(garredepart!="Ville")
 	  {
 	    
 	    fichier_gares>>garrearrive;
@@ -114,7 +115,7 @@
     {
       while(!sortie)
       {
-	while(ligne.compare(std::string("Feuille:")))
+	while(ligne.compare(std::string("Feuille")))
 	{
 	  if(!(fichier_routes>>ligne))
 	  {
@@ -122,14 +123,18 @@
 	    break;
 	  }
 	}
+	fichier_routes>>ligne;
 	if(!sortie)
 	{
 	  position=fichier_routes.tellg();
-	  while(ligne.substr(0,6)!="Prixh:")
+	  while(ligne.substr(0,5)!="prixh")
 	  {
 	    fichier_routes>>ligne;
 	  }
-	  prix=atoi(ligne.substr(6).c_str());
+	  fichier_routes>>ligne;
+	  fichier_routes>>ligne;
+	  
+	  prix=atoi(ligne.c_str());
 	  fichier_routes.seekg(position);
 	  std::getline(fichier_routes,ligne); //Récupération de la première ligne
 	  std::getline(fichier_routes,ligne); //Récupération de la première ligne
@@ -137,7 +142,7 @@
 	  //std::cout<<hdepart.heure()<<"\n";
 	  garredepart=ligne.substr(12);
 	  std::getline(fichier_routes,ligne);
-	  while(ligne.substr(0,6)!="Prixh:")
+	  while(ligne.substr(0,5)!="prixh")
 	  {
 	    _gare_list.insert(garredepart);
 	    harrive=Heure(atoi(ligne.substr(0,2).c_str()),atoi(ligne.substr(3,2).c_str()));

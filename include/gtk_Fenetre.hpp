@@ -19,10 +19,12 @@
 #include <gtkmm/checkbutton.h>
 #include <gtkmm/radiobutton.h>
 #include <glibmm/date.h>
+#include <gtkmm/paned.h>
 #include <set>
 class Fenetre: public Gtk::Window{
 protected:
   Gtk::VBox _boitev;
+  Gtk::VPaned _panneau_principal;
   Gtk::Toolbar _toolbar;
   Gtk::ToolButton _ouvrir_instance;
   Gtk::ToolButton _ouvrir_villes;

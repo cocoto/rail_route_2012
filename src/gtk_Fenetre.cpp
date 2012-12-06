@@ -5,7 +5,7 @@ Fenetre::Fenetre(): Gtk::Window(),_ouvrir_instance(Gtk::Stock::OPEN),_ouvrir_vil
     std::ostringstream oss;
     set_title("Rail route 2012");
     set_icon_from_file("images/picto_train.gif");
-    resize(640, 480);
+    resize(800, 600);
     set_position(Gtk::WIN_POS_CENTER);    
     
     _ouvrir_instance.set_tooltip_text("Charger une instance de trains");
@@ -20,8 +20,11 @@ Fenetre::Fenetre(): Gtk::Window(),_ouvrir_instance(Gtk::Stock::OPEN),_ouvrir_vil
     _box_resultats.pack_start(_label_resultat);
     
     _boitev.pack_start(_toolbar,Gtk::PACK_SHRINK);
-    _boitev.pack_start(_frame_recherche,Gtk::PACK_SHRINK);
-    _boitev.pack_start(_frame_resultats);
+    //_boitev.pack_start(_frame_recherche,Gtk::PACK_SHRINK);
+    //_boitev.pack_start(_frame_resultats);
+    _boitev.pack_start(_panneau_principal);
+    _panneau_principal.add1(_frame_recherche);
+    _panneau_principal.add2(_frame_resultats);
     
     _frame_recherche.add(_boite_recherche);
     _boite_recherche.attach(_gare_depart,0,1,0,1);

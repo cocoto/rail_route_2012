@@ -1,6 +1,13 @@
 #include "Ligne_bdd.hpp"
+
+/*
+ * Constructeurs de base
+ */
   Ligne_Bdd::Ligne_Bdd(const std::string &gare_depart, const std::string &gare_arrivee, const Heure &h_depart, const Heure &h_arrivee, const int &prix):_gare_depart(gare_depart),_gare_arrivee(gare_arrivee),_h_depart(h_depart),_h_arrivee(h_arrivee),_prix(prix),_pieton(false){}
   
+  /*
+   * Getters
+   */
   std::string Ligne_Bdd::gare_depart() const{
     return _gare_depart;
   }
@@ -20,6 +27,9 @@
     return _prix;
   }
   
+  /*
+   * Setters
+   */
   void Ligne_Bdd::h_depart(const Heure &h)
   {
     _h_depart=h;
@@ -41,6 +51,10 @@
     _gare_depart=gare;
   }
   
+  /*
+   * Retourne vrai si ce trajet est disponible en partance de la gare à partir de l'Heure h
+   * Si multiday=false, retourne vrai uniquement si le trajet est disponible AVANT la fin de la journée
+   */
   bool Ligne_Bdd::disponible(const std::string &gare, const Heure &h, const bool &multiday) const
   {
     if(!multiday)
@@ -53,8 +67,15 @@
     }
   }
   
+  /*
+   * Constructeur de base d'une ligne de base de donnée
+   * Deprecated
+   */
   Ligne_Bdd::Ligne_Bdd():_pieton(false){}
   
+  /*
+   * Accesseurs de l'état piéton
+   */
   bool Ligne_Bdd::est_pieton()const
   {
     return _pieton;

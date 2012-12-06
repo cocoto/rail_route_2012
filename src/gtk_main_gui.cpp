@@ -27,20 +27,29 @@
     _bdd->effacer();
     _fenetre->vider_ville();
   }
+  /*
+   * Fonction récupérant les informations de la fenêtre, lance la résolution du problème, et formatte la chaîne à afficher dans "résultats"
+   */
   void Gtk_main_gui::rechercher()
   {
     bool ar=_fenetre->is_ar();
-    std::ostringstream str_out;
+    std::ostringstream str_out; //Sortie
     std::string ville_arrivee=_fenetre->gare_a();
+    //Résolution
     std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(_fenetre->gare_d(),ville_arrivee,Heure(_fenetre->h_d(),_fenetre->m_d(),_fenetre->day_d()),_fenetre->rapport(),*_bdd,ar,Heure(_fenetre->h_a(),_fenetre->m_a(),_fenetre->day_a()),_fenetre->travel_class());
     str_out<<resultat.size()<<" trajets ont étés trouvés :\n";
   
+    
+    /*
+     * 
+     * Affichage (cf main.cpp)
+     */
   std::list<Ligne_Bdd*>::const_iterator it;
   std::set<Etape, Comparator_Etape>::reverse_iterator rit=resultat.rbegin();
   while(rit!=resultat.rend())
   {
     //Affichage de la solution
-    str_out<<"\n\n=================================\nArrivée le "<<Glib::Date(rit->heure.jour()).format_string("%x")<<" à "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n";
+    str_out<<"\n\n=================================\nArrivée le "<<Glib::Date(rit->heure.jour()).format_string("%x")<<" à "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n\n";
     if(ar)
     {
      str_out<<"\n-------------  Trajet Aller :   -------------\n"; 
@@ -66,14 +75,17 @@
     
     rit++;
   }
+  //Commande de mise à jour des résultats
   _fenetre->set_resultats(str_out.str());
   }
+  
+//Fonction allouant une fenêtre, une base de donnée, et un contrôleur les reliants
 int main(int argc, char* argv[]) {
-    Gtk::Main app(argc, argv);
+    Gtk::Main app(argc, argv); //Initialisation de GTK
     Fenetre fenetre;
     Bdd bdd;
     Gtk_main_gui main(&bdd,&fenetre);
-    Gtk::Main::run(fenetre);
+    Gtk::Main::run(fenetre); //Lancement de la fenêtre
     return 0;
 }
 

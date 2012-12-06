@@ -1,23 +1,39 @@
 #include "Solver.hpp"
+/*
+ * Fonction de calcul des TAILLE_TOP_SCORE meilleures solutions 
+ * Au départ de la gare "depart" vers "arrivee" à l'"heure_depart" 
+ * Selon le ratio (temps/cout) de préférence
+ * En repartant au plus tôt à heure_retour dans le cadre d'un aller-retour (booléen retour)
+ */
 std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const std::string &arrivee,const Heure &heure_depart, const float &preference,Bdd &bdd, const bool &retour, const Heure &heure_retour, const int &classe)
 {
+  //traitement est la liste des étapes à traiter (cf Comparator)
   std::priority_queue<Etape, std::vector<Etape>, Comparator> traitement((Comparator(preference)));
-  std::list<Ligne_Bdd*> trajets;
-  Etape etape;
+  std::list<Ligne_Bdd*> trajets; //Liste des trajets disponibles depuis une gare de départ à une certaine heure
+  Etape etape; //Étape initiale ou récupérée depuis la file de traitement
+  
+  /*Mise en place du problème initial et ajout de la première étape à la file de traitement
+   */
   etape.heure=heure_depart;
   etape.ville=depart;
   etape.gares_traverses.insert(depart);
   etape.prix_total=0;
   traitement.push(etape);
-  Ligne_Bdd* trajet;
+  
+  
+  Ligne_Bdd* trajet; //Un trajet parmis les trajets possibles
+  /*
+   * Création de du topX (résultat)
+   */
   Comparator_Etape competape(preference);
   std::set<Etape, Comparator_Etape> resultats(competape);
 
-
+    // Tant qu'il reste des tâches à traiter
     while(!traitement.empty())
     {
-
-        etape=traitement.top(); //traitement de la première Etape de la liste
+	
+	//Récupération et retrait de la première tâche à traiter
+        etape=traitement.top();
         traitement.pop();
         trajets=bdd.get_disponibles(etape.ville,etape.heure,true); // récupération de la liste des trajets découlant de cette étape
 
@@ -53,6 +69,7 @@ std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const 
                     {
                         etape2.heure=(*trajet).h_arrivee()+1440*etape2.heure.jour();
                     }
+                    //Traitement de la classe
                     if(classe==1)
                     {
                         etape2.prix_total+=(float)(*trajet).prix()*((*trajet).h_arrivee()-(*trajet).h_depart()).value()/60;
@@ -116,9 +133,9 @@ std::set<Etape, Comparator_Etape> Calcul_trajet(const std::string &depart,const 
                         traitement.push(etape2);
                     }
                 }
-            }
-        }
-    }
+            }//Fin Cas ville non visitée
+        }//Fin de parcourt des trajets possibles
+    }//Liste des tâches vides
     return resultats;
 
 }

@@ -2,22 +2,31 @@
 #include "Solver.hpp"
 
 
-
+/*
+ * Programme principal en console
+ * Interroge l'utilisateur sur les gares et temps de départ / arrivée
+ * Affiche les résultats obtenus
+ * Paramètres : 1=fichier instance 2= fichier Gare
+ */
 int main(int argc, char** argv)
 {
   (void)argc;
-  std::string fichier_trajets(argv[1]), fichier_gares(argv[2]);
-  Bdd bdd(fichier_trajets,fichier_gares);
-  std::cout<<"scan terminé\n";
+  std::string fichier_trajets(argv[1]), fichier_gares(argv[2]); //Récupération des paramètres (fichiers)
+  Bdd bdd(fichier_trajets,fichier_gares); //Parsing des instances et mise en place de la BDD
+//   std::cout<<"scan terminé\n";
 
-  std::string depart, destination;
-  std::set<std::string> list_gare=bdd.gare_list();
-  std::set<std::string>::iterator it_gare;
+  std::string depart, destination;//Ville de départ et d'arrivée
+  std::set<std::string> list_gare=bdd.gare_list(); //Récupération de la liste des gares du problème
+  
+  std::set<std::string>::iterator it_gare;//Itérateur sur la liste des gares du problème
   it_gare=list_gare.begin();
   int cpt=1;
-  int i,num,h_dep,jour_dep,h_arr,jour_arr,type_trajet,classe;
-  float preference;
+  int i,num,h_dep,jour_dep,h_arr,jour_arr,type_trajet,classe; //Valeurs selectionnées par l'utilisateur
+  float preference; //Ratio de préférence de trajet  0.0=Prix 1.0=Temps
 
+  /*
+   * Affichage et selection de la gare de départ
+   */
   while(it_gare!=list_gare.end())
   {
     std::cout<<cpt<<". "<<*it_gare<<"\n";
@@ -37,6 +46,10 @@ int main(int argc, char** argv)
       }
   }while(num<1 || num>=cpt);
 
+  
+  /*
+   * Affichage et selection de la gare d'arrivée
+   */
   it_gare=list_gare.begin();
   for(i=1;i<num;i++)
   {
@@ -80,6 +93,10 @@ int main(int argc, char** argv)
   }
   destination=*it_gare;
 
+  
+  /*
+   * Selection du type de trajet (aller - retour)
+   */
     do
     {
        std::cout<<"\n";
@@ -92,6 +109,9 @@ int main(int argc, char** argv)
         }
     }while(type_trajet!=1 && type_trajet!=2);
 
+    /*
+     * Selection de la date du départ
+     */
     do
     {
        std::cout<<"\n"<<"Quel jour souhaitez-vous partir? (nous sommes le jour 0)\n";
@@ -114,6 +134,9 @@ int main(int argc, char** argv)
         }
     }while(h_dep<0 || h_dep>=24);
 
+    /*
+     * Selection de la date de retour (si aller-retour selectionné) (jour max = 100)
+     */
     if(type_trajet==2)
     {
         do
@@ -139,6 +162,9 @@ int main(int argc, char** argv)
         }while(h_arr<0 || h_arr>=24);
     }
 
+    /*
+     * Choix du critère de décision (prix, temps, 50/50 )
+     */
     do
     {
        std::cout<<"Souhaitez-vous privilégier le temps de trajet ou le prix du trajet?\n";
@@ -166,6 +192,9 @@ int main(int argc, char** argv)
         preference=0.5;
     }
 
+    /*
+     * Choix de la classe
+     */
     std::cout<<"Préférez-vous voyager en 1ère ou en 2nd classe? (1 ou 2)\n";
     do
     {
@@ -176,20 +205,26 @@ int main(int argc, char** argv)
         }
     }while(classe!=1 && classe!=2);
 
-
+    
+    /*
+     * Cas d'aller simple
+     */
     if(type_trajet==1)
     {
+      //Affichage du récapitulatif de la demande
         std::cout<<"Récapitulatif :\n "<<"Vous souhaitez vous rendre à "<<destination<<" en partant de "<<depart<<" à partir de "<<h_dep<<"h00 le "<<jour_dep<<"\n";
 
+	//Lancement de la fonction de résolution
         std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(depart,destination,Heure(h_dep,0,jour_dep),preference,bdd,false,Heure(0),classe);
-        std::cout<<resultat.size()<<"trajets ont été trouvés :\n";
-
+        
+	//Affichage des résultats
+	std::cout<<resultat.size()<<"trajets ont été trouvés :\n";
         std::list<Ligne_Bdd*>::const_iterator it;
         std::set<Etape, Comparator_Etape>::reverse_iterator rit=resultat.rbegin();
         while(rit!=resultat.rend())
         {
         //Affichage de la solution
-        std::cout<<"=================================\nHeure d'arrivée : "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n-------------\n";
+        std::cout<<"=================================\nArrivée le jour "<<(*rit).heure.jour()<<" à "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n-------------\n";
         it=((*rit).trajets_effectues.begin());
         while(it!=(*rit).trajets_effectues.end())
         {
@@ -209,22 +244,27 @@ int main(int argc, char** argv)
         }
 
     }
+    
+    /*
+     * Cas d'aller - retour
+     */
     else
     {
+	//Affichage du récapitulatif de la demande
+        std::cout<<"Récapitulatif :\n"<<"Vous souhaitez vous rendre à "<<destination<<" en partant de "<<depart<<" à partir de "<<h_dep<<"h00 le jour "<<jour_dep;
+        std::cout<<" et revenir à "<<depart<<" le jour "<<jour_arr<<" à partir de "<<h_arr<<"h00\n\n";
 
-        std::cout<<"Récapitulatif :\n"<<"Vous souhaitez vous rendre à "<<destination<<" en partant de "<<depart<<" à partir de "<<h_dep<<"h00 le "<<jour_dep;
-        std::cout<<" et revenir à "<<depart<<" le "<<jour_arr<<" à partir de "<<h_arr<<"h00\n\n";
-
-
+	//Lancement de la fonction de résolution
         std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(depart,destination,Heure(h_dep,0,jour_dep),preference,bdd,true,Heure(h_arr,0,jour_arr),classe);
         std::cout<<resultat.size()<<" trajets ont été trouvés :\n";
 
+	//Affichage de la solution
         std::list<Ligne_Bdd*>::const_iterator it;
         std::set<Etape, Comparator_Etape>::reverse_iterator rit=resultat.rbegin();
         while(rit!=resultat.rend())
         {
-        //Affichage de la solution
-        std::cout<<"=================================\nHeure d'arrivée : "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n-------------\n";
+        std::cout<<"\n=================================\nArrivée le jour "<<(*rit).heure.jour()<<" à "<<(*rit).heure<<" coût total : "<<(*rit).prix_total<<"\n";
+        std::cout<<"\n---------    Trajet aller :    -----------\n";
         it=((*rit).trajets_effectues.begin());
         while(it!=(*rit).trajets_effectues.end())
         {
@@ -235,6 +275,10 @@ int main(int argc, char** argv)
           else
           {
         std::cout<<"Prendre le train de "<<(*it)->h_depart()<<" en direction de "<<(*it)->gare_arrivee()<<" (arrivée à "<<(*it)-> h_arrivee()<<")\n";
+          }
+          if((*it)->gare_arrivee()==destination)
+          {
+              std::cout<<"\n---------    Trajet retour :    -----------\n";
           }
           it++;
         }

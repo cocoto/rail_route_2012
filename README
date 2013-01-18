@@ -1,0 +1,77 @@
+*****************************************************************************************
+*					rail_route_2012					*
+*   Operational research project of ORO Master in University of Nantes November 2012	*
+*				Quentin Tonneau - Guillaume Guoisque			*
+*****************************************************************************************
+====================================================================================================================================
+ATTENTION A LIRE IMPERATIVEMENT :
+--------------------------------
+Le parseur des fichiers d'instances est prévu pour fonctionner sous un environnement UNIX
+En cas de problème lors du chargement des fichiers, merci de bien vérifier l'encodage des caractères de fin de ligne (\n\r)
+Copier / Coller le contenu des fichiers d'instance dans un nouveau document sous gedit/kate en cas de problème.
+
+
+====================================================================================================================================
+Description de l'arborescence du projet :
+-----------------------------------------
+/doc 		: Rapports et images descriptives
+/bin 		: Exécutables compilés
+/src 		: Fichiers sources
+/include	: Fichiers d'en-têtes des classes
+/instances 	: Fichiers d'instances (Feuilles de route, Trajets piétons, Liste de gare)
+/images		: Fichier images nécéssaires à l'interface graphique
+README		: Fichier en cours de lecture
+makefile	: Fichier de compilation automatique
+
+====================================================================================================================================
+Instructions de compilation :
+------------------------------
+make 			: compile l'ensemble des 3 programmes (erreur de compilation sans conséquences si gtkmm n'est pas installé)
+make bin/prog		: compile le programme en mode console
+make bin/gtk_prog 	: compile le programme en mode graphique (nécéssite gtkmm voir plus bas)
+make clean		: supprime les fichiers de compilation (.o)
+make mrproper		: supprime les fichiers de compilation et les exécutables créés (reset le projet)
+
+====================================================================================================================================
+Compilation manuelle :
+-----------------------
+PARTIE COMMUNE
+g++ -Iinclude  -c src/Ligne_bdd.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude  -c src/Heure.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude  -c src/Bdd.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude  -c src/Etape.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude  -c src/Comparator.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude  -c src/Solver.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude  -c src/Comparator_Etape.cpp -W -Wall -ansi -pedantic -pipe -O3
+
+PARTIE CONSOLE
+g++ -Iinclude  -c src/main.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude Ligne_bdd.o Heure.o Bdd.o main.o Etape.o Comparator.o Solver.o Comparator_Etape.o -o bin/prog -W -Wall -ansi -pedantic -pipe -O3
+
+PARTIE GRAPHIQUE (nécéssite la bibliothèque libgtkmm-3.0)
+g++ -Iinclude -c src/gtk_Fenetre.cpp -W -Wall -ansi -pedantic -pipe -O3 `pkg-config --cflags gtkmm-3.0`
+g++ -Iinclude -c src/gtk_main_gui.cpp -W -Wall -ansi -pedantic -pipe -O3 `pkg-config --cflags gtkmm-3.0`
+g++ -Iinclude Bdd.o Heure.o Ligne_bdd.o Solver.o Comparator.o Comparator_Etape.o gtk_Fenetre.o gtk_main_gui.o -o bin/gtk_prog -W -Wall -ansi -pedantic -pipe -O3 `pkg-config --libs --cflags gtkmm-3.0`
+
+PARTIE GENERATEUR D'INSTANCE
+g++ -Iinclude  -c src/generateur.cpp -W -Wall -ansi -pedantic -pipe -O3
+g++ -Iinclude generateur.o Heure.o -o bin/generateur -W -Wall -ansi -pedantic -pipe -O3
+
+====================================================================================================================================
+Exécution de l'interface graphique :
+-------------------------------------
+bin/gtk_prog
+
+====================================================================================================================================
+Exécution de l'interface en console :
+-------------------------------------
+bin/prog <fichier de feuilles> <fichier de gare>
+
+Exemple : bin/prog instances/FeuillesRoute_12_13.txt instances/Gares_12_13.txt
+
+====================================================================================================================================
+Exécution du programme de génération d'instance :
+--------------------------------------------------
+bin/generateur <fichier liste de gare> <nombre de feuilles à générer> <nombre d'étapes maximum par feuille> <temps maximum de trajet entre 2 gares> <temps maximum d'arrêt en gare>
+
+Exemple : bin/generateur instances/Liste_gare.txt 100 20 180 20

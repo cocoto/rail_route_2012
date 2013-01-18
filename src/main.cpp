@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 
   std::string depart, destination;//Ville de départ et d'arrivée
   std::set<std::string> list_gare=bdd.gare_list(); //Récupération de la liste des gares du problème
-  
+
   std::set<std::string>::iterator it_gare;//Itérateur sur la liste des gares du problème
   it_gare=list_gare.begin();
   int cpt=1;
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
       }
   }while(num<1 || num>=cpt);
 
-  
+
   /*
    * Affichage et selection de la gare d'arrivée
    */
@@ -93,7 +93,7 @@ int main(int argc, char** argv)
   }
   destination=*it_gare;
 
-  
+
   /*
    * Selection du type de trajet (aller - retour)
    */
@@ -205,7 +205,7 @@ int main(int argc, char** argv)
         }
     }while(classe!=1 && classe!=2);
 
-    
+
     /*
      * Cas d'aller simple
      */
@@ -216,7 +216,7 @@ int main(int argc, char** argv)
 
 	//Lancement de la fonction de résolution
         std::set<Etape, Comparator_Etape> resultat=Calcul_trajet(depart,destination,Heure(h_dep,0,jour_dep),preference,bdd,false,Heure(0),classe);
-        
+
 	//Affichage des résultats
 	std::cout<<resultat.size()<<"trajets ont été trouvés :\n";
         std::list<Ligne_Bdd*>::const_iterator it;
@@ -226,6 +226,7 @@ int main(int argc, char** argv)
         //Affichage de la solution
         std::cout<<"=================================\nArrivée le jour "<<(*rit).heure.jour()<<" à "<<(*rit).heure<<" coût : "<<(*rit).prix_total<<"\n-------------\n";
         it=((*rit).trajets_effectues.begin());
+
         while(it!=(*rit).trajets_effectues.end())
         {
           if((*it)->est_pieton())
@@ -244,7 +245,7 @@ int main(int argc, char** argv)
         }
 
     }
-    
+
     /*
      * Cas d'aller - retour
      */

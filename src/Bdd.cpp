@@ -5,7 +5,7 @@
 #include <string>
 #include <stdlib.h>
 #include <utility>
-  
+
   /*
    * Constructeur avec parsing des deux fichiers
    */
@@ -14,14 +14,14 @@
     load_routes_file(routes_filename);
     load_gares_file(gares_filename);
   }
-  
+
   /*
    * Constructeur habituel
    */
   Bdd::Bdd(){
     std::multimap< std::string,Ligne_Bdd > ();
   }
-  
+
   /*
    * Fonction retournant la liste des trajets possibles pour une étape donnée (lieu, heure)
    * Lorsque multiday=false, ne retourne que les trains partants avant la fin de la journée
@@ -45,8 +45,8 @@
       }
       return resultat;
   }
-  
-  
+
+
   /*
    * Fonction de parsing d'un fichier de trajets piétons
    */
@@ -60,7 +60,7 @@
     std::streampos position; // Sauvegarde de la position du curseur dans le fichier
     Ligne_Bdd ligneBdd;
     bool sortie=false;
-    
+
     //On vérifie la bonne ouverture du fichier
     if(fichier_gares)
     {
@@ -80,25 +80,25 @@
 	}
 	//On récupère le caractère ":" (inutilisé)
 	fichier_gares>>poubelle;
-	
+
 	if(!sortie)
 	{
 	  //Récupération de la ville
 	  fichier_gares>>ville;
 	  //Récupération de la première gare
 	  fichier_gares>>garredepart;
-	  
-	  //On parcours le fichier jusqu'à retrouver une nouvelle Ville : 
+
+	  //On parcours le fichier jusqu'à retrouver une nouvelle Ville :
 	  while(garredepart!="Ville")
 	  {
 	    //Récupération de la ville d'arrivée
 	    fichier_gares>>garrearrive;
 	    _gare_list.insert(ville+" "+garredepart);
 	    _gare_list.insert(ville+" "+garrearrive);
-	    
+
 	    //Récupération du temps de trajet
 	    fichier_gares>>temps;
-	    
+
 	    //Création du trajet
 	    paire.first=ville+" "+garredepart;
 	    ligneBdd.gare_arrivee(ville+" "+garrearrive);
@@ -109,14 +109,14 @@
 	    paire.second=ligneBdd;
 	    //std::cout<<"Trajet pieton de "<<paire.second.gare_depart()<<" à "<<paire.second.gare_arrivee()<<"\n";
 	    insert(paire);
-	    
+
 	    //Ajout dans la base de données
 	    paire.first=ville+" "+garrearrive;
 	    paire.second.gare_arrivee(ville+" "+garredepart);
 	    paire.second.gare_depart(ville+" "+garrearrive);
 	    //std::cout<<"Trajet pieton de "<<paire.second.gare_depart()<<" à "<<paire.second.gare_arrivee()<<"\n";
 	    insert(paire);
-	    
+
 	    //Lecture de la nouvelle gare de départ (ou de la nouvelle ligne Ville : )
 	    if(!(fichier_gares>>garredepart))
 	    {
@@ -133,8 +133,8 @@
       std::cout<<"Error during opening "<<gares_filename<<"\n";
     }
   }
-  
-  
+
+
   /*
    * Fonction de parsing d'un fichier de feuilles de routes (trains)
    */
@@ -150,7 +150,7 @@
     std::streampos position; // Sauvegarde de la position du curseur dans le fichier
     Ligne_Bdd ligneBdd;
     bool sortie=false;
-    
+
     //On vérifie la bonne ouverture du fichier
     if(fichier_routes)
     {
@@ -165,14 +165,14 @@
 	    break;
 	  }
 	}
-	
+
 	//On échape le caractère inutilisé (:)
 	fichier_routes>>ligne;
 	if(!sortie)
 	{
 	  //On sauvegarde la position de la première ligne de la feuille
 	  position=fichier_routes.tellg();
-	  
+
 	  //On recherche le prix de la feuille (pour l'ajouter dans toutes les lignes de la Bdd)
 	  while(ligne.substr(0,5)!="prixh")
 	  {
@@ -182,35 +182,35 @@
 	  fichier_routes>>ligne;
 	  //Récupération du prix
 	  fichier_routes>>ligne;
-	  
+
 	  prix=atoi(ligne.c_str());
-	  
+
 	  //On retourne au début de la feuille
 	  fichier_routes.seekg(position);
 	  std::getline(fichier_routes,ligne); //On jette la fin de la ligne (après "Feuille")
 	  std::getline(fichier_routes,ligne); //Récupération de la première ligne de la feuille
-	  
+
 	  //Récupération de l'heure et la gare de départ par explosion de la ligne
 	  hdepart=Heure(atoi(ligne.substr(6,2).c_str()),atoi(ligne.substr(9,2).c_str()));
 	  //std::cout<<hdepart.heure()<<"\n";
 	  garredepart=ligne.substr(12);
-	  
+
 	  //Passage à la ligne suivante (contenant la nouvelle gare et heure d'arrivée
 	  std::getline(fichier_routes,ligne);
 	  //On boucle jusqu'à la fin de la feuille (retombée sur le prix)
 	  while(ligne.substr(0,5)!="prixh")
 	  {
 	    _gare_list.insert(garredepart);
-	    
+
 	    //Récupération de l'heure et de la gare d'arrivée
 	    harrive=Heure(atoi(ligne.substr(0,2).c_str()),atoi(ligne.substr(3,2).c_str()));
 	    garrearrive=ligne.substr(12);
-	    
+
 	    //Constitution et ajout de la ligne dans la Bdd
 	    paire.first=garredepart;
 	    paire.second=Ligne_Bdd(garredepart,garrearrive,hdepart,harrive,prix);
 	    insert(paire);
-	    
+
 	    //Récupération des information du prochain départ
 	    hdepart=Heure(atoi(ligne.substr(6,2).c_str()),atoi(ligne.substr(9,2).c_str()));
 	    garredepart=garrearrive;
@@ -219,14 +219,14 @@
 	  _gare_list.insert(garredepart);
 	}//Boucle de parcourt d'une feuille
       }//Boucle de parcourt des feuilles
-      fichier_routes.close();      
+      fichier_routes.close();
     }//Vérification de l'ouverture du fichier
     else
     {
       std::cout<<"Error during opening "<<routes_filename<<"\n";
     }
  }
- 
+
  /*
   * Fonction retournant la liste des gares de la Bdd
   */
@@ -234,7 +234,7 @@
  {
    return _gare_list;
  }
- 
+
  /*
   * Fonction effacant la base de donnée (Bdd)
   */
